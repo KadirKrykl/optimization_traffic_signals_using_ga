@@ -121,16 +121,15 @@ if __name__ == "__main__":
 ## Traffic Phase and Signal
 # process 120 sec
 # 2 sec delay between phases(yellow signals)
-# Every phase has total 40sec and yellow has 2 second
-# So 38 * bestPop[phase] = green light time
+# So 112 * bestPop[phase] = green light time
 
 print("IRL Current Signals")
 ratios = [0.365,0.144,0.260,0.231]
 for i in range(4):
-    gls = 38*ratios[i]
-    print("Phase:{0}\n-Green Light Time: {1} \n-Red Light Time: {2} \n-Yellow Light Time: {3} \n".format(i+1, gls, 38-gls, 2) )
+    gls = 112*ratios[i]
+    print("Phase:{0}\n-Green Light Time: {1} \n-Red Light Time: {2} \n-Yellow Light Time: {3} \n".format(i+1, gls, 112-gls, 2) )
 
 print("Final Population Signals")
 for i in range(4):
-    gls = 38*bestPop[i]
-    print("Phase:{0}\n-Green Light Time: {1} \n-Red Light Time: {2} \n-Yellow Light Time: {3} \n".format(i+1, gls, 38-gls, 2) )
+    gls = 112*bestPop[i]
+    print("Phase:{0}\n-Green Light Time: {1} \n-Red Light Time: {2} \n-Yellow Light Time: {3} \n".format(i+1, gls, 112-gls, 2) )
